@@ -1,7 +1,7 @@
 <?php
 
 if (! defined('ABSPATH')) {
-    exit;
+    exit; // Exit if accessed directly.
 }
 
 /*
@@ -18,4 +18,4 @@ define('PLUGIN_DIR', plugin_dir_path(__FILE__));
 
 include PLUGIN_DIR . 'includes/primary-meta-box.php';
 
-new meta_box_init();
+$meta_box = new meta_box_init();
