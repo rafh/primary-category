@@ -57,7 +57,6 @@ class meta_box_init {
     	$html .= '</select>';
 
     	echo $html;
-
     }
 
     public function meta_box_meta() {
