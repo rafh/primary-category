@@ -8,7 +8,6 @@ class meta_box_init {
         add_action( 'save_post', array( $this, 'meta_box_meta' ) );
     }
 
-
     public function meta_box_setup() {
 
         // Get all post types
@@ -56,7 +55,13 @@ class meta_box_init {
 
     	$html .= '</select>';
 
-    	echo $html;
+        // Check if categories are present
+        if($post_categories) {
+            echo $html;
+        } else {
+            echo 'Categories are not assigned to this post.';
+        }
+
     }
 
     public function meta_box_meta() {
